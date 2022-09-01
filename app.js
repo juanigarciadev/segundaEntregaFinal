@@ -43,7 +43,7 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
-
+const btnCarrito = document.getElementById('boton-carrito')
 
 
 
@@ -159,6 +159,8 @@ const actualizarCarrito = () => {
 
     // Se actualiza el número del carrito dependiendo la cantidad de productos ingresados
     contadorCarrito.innerText = carrito.length
+    // Si la longitud de carrito es mayor o igual a 1, entonces muestra el carrito, en cambio si la longitud es 0, oculta el carrito.
+    carrito.length >= 1 ? btnCarrito.style.display = "block" : btnCarrito.style.display = "none"
     console.log(carrito)
 
     //Por cada producto que recorro en mi carrito, al acumulador (acc) le suma la propiedad precio, con el acumulador empezando en 0.

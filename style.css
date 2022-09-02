@@ -1,3 +1,8 @@
+:root {
+  --colorCorporativo: #ff0038;
+  --colorCorporativoDark: #a80024;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -100,6 +105,7 @@ p {
 
 .precioProducto {
   font-weight: 700;
+  color: white;
 }
 
 .boton-agregar {
@@ -113,6 +119,8 @@ p {
 
 .boton-agregar:hover {
   cursor: pointer;
+  background-color: var(--colorCorporativoDark);
+  transition: all .3s;
 }
 
 .boton-agregar:focus {
@@ -145,7 +153,7 @@ p {
 
 .modal-carrito {
   position: relative;
-  background-color: white;
+  background-color: #181818;
   min-width: 500px;
   padding: 20px;
   margin-top: -100%;
@@ -168,7 +176,19 @@ p {
   font-size: 20px;
   color: #ff0038;
   border: none;
-  background-color: white;
+}
+
+.btnCarritoCerrar {
+  background-color: #181818;
+}
+
+.fa-times-circle:hover {
+  color: var(--colorCorporativoDark);
+  transition: all .3s;
+}
+
+.fa-times-circle {
+  background-color: #181818;
 }
 
 .modal-carrito #carritoCerrar:hover {
@@ -185,7 +205,7 @@ p {
 
 
 .productoEnCarrito {
-  border-left: 5px solid lightblue;
+  border-left: 5px solid white;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
   margin: 5px 0;
@@ -196,12 +216,19 @@ p {
 .productoEnCarrito:hover {
   border-left: 5px solid #ff0038;
 }
+.productoEnCarrito p {
+  color: white;
+}
 
 .boton-eliminar {
-  background-color: white;
+  background-color: #181818;
   color: red;
   border: none;
   font-size: 20px;
+}
+.boton-eliminar:hover {
+  color: var(--colorCorporativoDark);
+  transition: all .3s;
 }
 
 .boton-eliminar:hover {

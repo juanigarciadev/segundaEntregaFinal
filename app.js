@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Se resetea el contador de productos del carrito y se llama a la función actualizarCarrito
 botonVaciar.addEventListener('click', () => {
+    // Si longitud de carrito es mayor o igual a 1, vaciarlo y ejecutar el toast que avisa que fue vaciado con exito
+    // sino, avisarle al usuario que el carrito ya está vacío
     carrito.length >= 1 ? (carrito.length = 0, toastVaciarCarrito()) : toastCarritoYaVacio()
     actualizarCarrito()
 })

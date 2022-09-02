@@ -171,11 +171,22 @@ const actualizarCarrito = () => {
 
 }
 
+
+
+// Librerías
+
+
+
+// Toastify
 // Se crea la función contenedora del toast que anuncia que el producto se agregó al carrito.
 function toastAgregadoAlCarrito() {
     // Se muestra una notificación de que el producto fue agregado al carrito mediante la libreria toastify
     Toastify({
         text: "Producto agregado al carrito.",
+        avatar: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/white-heavy-check-mark_2705.png",
+        duration: 2000,
+        stopOnFocus: false,
+        close: true,
         className: "info",
         style: {
             background: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -184,9 +195,14 @@ function toastAgregadoAlCarrito() {
 
 }
 
+// Se crea la función contenedora del toast que anuncia que el producto se eliminó del carrito.
 function toastEliminadoDelCarrito() {
     Toastify({
         text: "Producto eliminado del carrito.",
+        avatar: "https://cdn-0.emojis.wiki/emoji-pics/facebook/cross-mark-button-facebook.png",
+        duration: 2000,
+        stopOnFocus: false,
+        close: true,
         className: "info",
         style: {
             background: "linear-gradient(to right, #FE8227, #FE2727)",
@@ -194,9 +210,14 @@ function toastEliminadoDelCarrito() {
     }).showToast();
 }
 
+// Se crea la función contenedora del toast que anuncia que se eliminaron todos los productos del carrito.
 function toastVaciarCarrito() {
     Toastify({
         text: "Carrito vaciado con éxito.",
+        avatar: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/wastebasket_1f5d1-fe0f.png",
+        duration: 2000,
+        stopOnFocus: false,
+        close: true,
         className: "info",
         style: {
             background: "linear-gradient(to right, #27E4FE, #278CFE)",

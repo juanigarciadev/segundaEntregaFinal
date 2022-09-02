@@ -1,8 +1,8 @@
 // Se crea la variable que va a contener el stock.
 let stockProductos = [
-    { id: 1, nombre: "PC Gaming R5 5600G", motherboard: "Gigabyte A520M", socket: "AM4", procesador: "Ryzen 5 5600G", tipoRam: "DDR4", gbRam: "16GB", velRam: "3200mhz", grafica: false, fuenteCertificada: true, wattsFuente: 650, precio: 90000, cantidad: 1, img: './images/pc.png' },
+    { id: 1, nombre: "PC Gaming R5 5600G", motherboard: "Gigabyte A520M", socket: "AM4", procesador: "Ryzen 5 5600G", tipoRam: "DDR4", gbRam: "16GB", velRam: "3200mhz", grafica: "N/A", fuenteCertificada: true, wattsFuente: 650, precio: 90000, cantidad: 1, img: './images/pc.png' },
     { id: 2, nombre: "PC Gaming R7 5700G", motherboard: "Gigabyte B450M", socket: "AM4", procesador: "Ryzen 5 5700G", tipoRam: "DDR4", gbRam: "32GB", velRam: "3600mhz", grafica: "RTX 3060", fuenteCertificada: true, wattsFuente: 750, precio: 200000, cantidad: 1, img: './images/pc2.png' },
-    { id: 3, nombre: "PC Athlon 3000G", motherboard: "Asus A320m-k", socket: "AM4", procesador: "Athlon 3000G", tipoRam: "DDR4", gbRam: "8GB", velRam: "2666mhz", grafica: false, fuenteCertificada: false, wattsFuente: 500, precio: 70000, cantidad: 1, img: './images/pc3.png' }
+    { id: 3, nombre: "PC Athlon 3000G", motherboard: "Asus A320m-k", socket: "AM4", procesador: "Athlon 3000G", tipoRam: "DDR4", gbRam: "8GB", velRam: "2666mhz", grafica: "N/A", fuenteCertificada: false, wattsFuente: 500, precio: 70000, cantidad: 1, img: './images/pc3.png' }
 ]
 
 
@@ -81,6 +81,7 @@ stockProductos.forEach((producto) => {
     <p><strong class="darkHighlightedText">Motherboard:</strong> ${producto.motherboard}</p>
     <p><strong class="darkHighlightedText">RAM:</strong> ${producto.gbRam}</p>
     <p><strong class="darkHighlightedText">Velocidad RAM:</strong> ${producto.velRam}</p>
+    <p><strong class="darkHighlightedText">Gráfica:</strong> ${producto.grafica}</p>
     <p><strong class="darkHighlightedText">Precio:</strong> ${producto.precio}</p>
     <div class="paddingBottom"></div>
     <div class="contenedorBotonAgregarCarrito">

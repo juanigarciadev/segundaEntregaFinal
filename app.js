@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Se resetea el contador de productos del carrito y se llama a la función actualizarCarrito
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
+    toastVaciarCarrito()
     actualizarCarrito()
 })
 
@@ -130,6 +131,7 @@ const eliminarDelCarrito = (prodId) => {
 
     // Se le pasa el índice del elemento del carrito y se lo elimina.
     carrito.splice(indice, 1)
+    toastEliminadoDelCarrito()
     actualizarCarrito()
     console.log(carrito)
 }
@@ -180,4 +182,24 @@ function toastAgregadoAlCarrito() {
         }
     }).showToast();
 
+}
+
+function toastEliminadoDelCarrito() {
+    Toastify({
+        text: "Producto eliminado del carrito.",
+        className: "info",
+        style: {
+            background: "linear-gradient(to right, #FE8227, #FE2727)",
+        }
+    }).showToast();
+}
+
+function toastVaciarCarrito() {
+    Toastify({
+        text: "Carrito vaciado con éxito.",
+        className: "info",
+        style: {
+            background: "linear-gradient(to right, #27E4FE, #278CFE)",
+        }
+    }).showToast();
 }

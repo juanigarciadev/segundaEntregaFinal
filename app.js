@@ -115,6 +115,7 @@ const agregarAlCarrito = (prodId) => {
         const item = stockProductos.find((prod) => prod.id === prodId)
         carrito.push(item)
     }
+    toastAgregadoAlCarrito()
     actualizarCarrito()
 }
 
@@ -165,5 +166,18 @@ const actualizarCarrito = () => {
 
     //Por cada producto que recorro en mi carrito, al acumulador (acc) le suma la propiedad precio, con el acumulador empezando en 0.
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+
+}
+
+// Se crea la función contenedora del toast que anuncia que el producto se agregó al carrito.
+function toastAgregadoAlCarrito() {
+    // Se muestra una notificación de que el producto fue agregado al carrito mediante la libreria toastify
+    Toastify({
+        text: "Producto agregado al carrito.",
+        className: "info",
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        }
+    }).showToast();
 
 }

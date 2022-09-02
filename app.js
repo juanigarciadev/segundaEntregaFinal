@@ -7,7 +7,17 @@ let stockProductos = [
 
 
 
-
+// Se define el DOM
+const contenedorCarrito = document.getElementById('carrito-contenedor')
+const botonVaciar = document.getElementById('vaciar-carrito')
+const cantidad = document.getElementById('cantidad')
+const precioTotal = document.getElementById('precioTotal')
+const cantidadTotal = document.getElementById('cantidadTotal')
+// Contenedor cards main
+const contenedorProductos = document.getElementById('contenedor-productos')
+// Elementos del header
+const btnCarrito = document.getElementById('boton-carrito')
+const contadorCarrito = document.getElementById('contadorCarrito')
 // Modal (menú desplegable contenedor de productos al presionar el boton de carrito)
 const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
 const botonAbrir = document.getElementById('boton-carrito')
@@ -30,23 +40,6 @@ modalCarrito.addEventListener('click', (event) => {
     //Cuando presiono sobre el modal se finaliza la propagacion del click a los elementos padre.
     event.stopPropagation()
 })
-
-
-
-
-
-// Se define el DOM
-const contenedorProductos = document.getElementById('contenedor-productos')
-const contenedorCarrito = document.getElementById('carrito-contenedor')
-const botonVaciar = document.getElementById('vaciar-carrito')
-const contadorCarrito = document.getElementById('contadorCarrito')
-const cantidad = document.getElementById('cantidad')
-const precioTotal = document.getElementById('precioTotal')
-const cantidadTotal = document.getElementById('cantidadTotal')
-const btnCarrito = document.getElementById('boton-carrito')
-
-
-
 
 
 // Se define la variable que va a contener los productos que se vayan agregando al carrito
@@ -191,7 +184,7 @@ function toastAgregadoAlCarrito() {
         stopOnFocus: false,
         className: "info",
         style: {
-            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "linear-gradient(to right, #15B206, #51E721)",
         }
     }).showToast();
 

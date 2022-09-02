@@ -62,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Se resetea el contador de productos del carrito y se llama a la función actualizarCarrito
 botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
-    toastVaciarCarrito()
+    carrito.length >= 1 ? (carrito.length = 0, toastVaciarCarrito()) : toastCarritoYaVacio()
     actualizarCarrito()
 })
 
@@ -218,6 +217,20 @@ function toastVaciarCarrito() {
         className: "info",
         style: {
             background: "linear-gradient(to right, #27E4FE, #278CFE)",
+        }
+    }).showToast();
+}
+
+// Toast para cuando el carrito ya está vacío y el usuario sigue intentando vaciarlo.
+function toastCarritoYaVacio() {
+    Toastify({
+        text: "El carrito ya está vacio.",
+        avatar: "https://emojipedia-us.s3.amazonaws.com/source/skype/289/question-mark_2753.png",
+        duration: 2000,
+        stopOnFocus: false,
+        className: "info",
+        style: {
+            background: "linear-gradient(to right, #FFE000, #FFB900)",
         }
     }).showToast();
 }

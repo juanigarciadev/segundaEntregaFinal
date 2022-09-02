@@ -81,6 +81,7 @@ stockProductos.forEach((producto) => {
     <p><strong class="darkHighlightedText">Motherboard:</strong> ${producto.motherboard}</p>
     <p><strong class="darkHighlightedText">RAM:</strong> ${producto.gbRam}</p>
     <p><strong class="darkHighlightedText">Velocidad RAM:</strong> ${producto.velRam}</p>
+    <p><strong class="darkHighlightedText">Precio:</strong> ${producto.precio}</p>
     <div class="paddingBottom"></div>
     <div class="contenedorBotonAgregarCarrito">
     <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>

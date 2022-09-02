@@ -58,6 +58,7 @@ botonVaciar.addEventListener('click', () => {
     // Si longitud de carrito es mayor o igual a 1, vaciarlo y ejecutar el toast que avisa que fue vaciado con exito
     // sino, avisarle al usuario que el carrito ya está vacío
     carrito.length >= 1 ? (carrito.length = 0, toastVaciarCarrito()) : toastCarritoYaVacio()
+    localStorage.clear()
     actualizarCarrito()
 })
 

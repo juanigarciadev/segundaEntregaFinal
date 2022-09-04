@@ -128,6 +128,25 @@ p {
   outline: none;
 }
 
+.boton-comprar {
+  background-color: #15B206;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border: none;
+}
+
+.boton-comprar:hover {
+  cursor: pointer;
+  background-color: #108c04;
+  transition: all .3s;
+}
+
+.boton-comprar:focus {
+  outline: none;
+}
+
 .contenedorBotonAgregarCarrito {
     display: flex;
     justify-content: center;

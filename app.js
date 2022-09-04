@@ -23,6 +23,7 @@ const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
 const botonAbrir = document.getElementById('boton-carrito')
 const botonCerrar = document.getElementById('carritoCerrar')
 const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
+const realizarCompra = document.getElementById('realizar-compra')
 
 
 botonAbrir.addEventListener('click', () => {
@@ -59,9 +60,17 @@ botonVaciar.addEventListener('click', () => {
     // Si longitud de carrito es mayor o igual a 1, vaciarlo y ejecutar el toast que avisa que fue vaciado con exito
     // sino, avisarle al usuario que el carrito ya está vacío
     carrito.length >= 1 ? (carrito.length = 0, toastVaciarCarrito()) : toastCarritoYaVacio()
-    localStorage.clear()
+    localStorage.removeItem('carrito')
     actualizarCarrito()
 })
+
+// Botón en el modal para realizar la compra
+realizarCompra.addEventListener('click', () => {
+    carrito.length = 0
+    efectuarCompra()
+    actualizarCarrito()
+})
+
 
 // Se crea el contenido de las cards mediante un bucle forEach.
 stockProductos.forEach((producto) => {
@@ -234,6 +243,19 @@ function toastCarritoYaVacio() {
     }).showToast();
 }
 
+function efectuarCompra() {
+    Toastify({
+        text: "La compra ha sido realizada con éxito.",
+        avatar: "https://emojitool.com/img/whatsapp/2.19.244/shopping-trolley-2323.png",
+        duration: 2000,
+        stopOnFocus: false,
+        className: "info",
+        style: {
+            background: "linear-gradient(to right, #15B206, #51E721)",
+        }
+    }).showToast();
+    localStorage.removeItem('carrito')
+}
 
 // Funciones de utilidad
 function desaparecerCarrito() {

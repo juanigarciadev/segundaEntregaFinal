@@ -193,6 +193,7 @@ function toastAgregadoAlCarrito() {
         avatar: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/white-heavy-check-mark_2705.png",
         duration: 2000,
         stopOnFocus: false,
+        gravity: "bottom",
         className: "info",
         style: {
             background: "linear-gradient(to right, #15B206, #51E721)",
@@ -208,6 +209,7 @@ function toastEliminadoDelCarrito() {
         avatar: "https://cdn-0.emojis.wiki/emoji-pics/facebook/cross-mark-button-facebook.png",
         duration: 2000,
         stopOnFocus: false,
+        gravity: "bottom",
         className: "info",
         style: {
             background: "linear-gradient(to right, #FE8227, #FE2727)",
@@ -222,6 +224,7 @@ function toastVaciarCarrito() {
         avatar: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/wastebasket_1f5d1-fe0f.png",
         duration: 2000,
         stopOnFocus: false,
+        gravity: "bottom",
         className: "info",
         style: {
             background: "linear-gradient(to right, #27E4FE, #278CFE)",
@@ -236,6 +239,7 @@ function toastCarritoYaVacio() {
         avatar: "https://emojipedia-us.s3.amazonaws.com/source/skype/289/question-mark_2753.png",
         duration: 2000,
         stopOnFocus: false,
+        gravity: "bottom",
         className: "info",
         style: {
             background: "linear-gradient(to right, #FFE000, #FFB900)",
@@ -249,6 +253,7 @@ function efectuarCompra() {
         avatar: "https://emojitool.com/img/whatsapp/2.19.244/shopping-trolley-2323.png",
         duration: 2000,
         stopOnFocus: false,
+        gravity: "bottom",
         className: "info",
         style: {
             background: "linear-gradient(to right, #15B206, #51E721)",

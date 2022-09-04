@@ -66,9 +66,7 @@ botonVaciar.addEventListener('click', () => {
 
 // Botón en el modal para realizar la compra
 realizarCompra.addEventListener('click', () => {
-    carrito.length = 0
-    efectuarCompra()
-    actualizarCarrito()
+    carrito.length >= 1 ? (carrito.length = 0, efectuarCompra(), actualizarCarrito()) : toastCarritoYaVacio()
 })
 
 
@@ -235,7 +233,7 @@ function toastVaciarCarrito() {
 // Toast para cuando el carrito ya está vacío y el usuario sigue intentando vaciarlo.
 function toastCarritoYaVacio() {
     Toastify({
-        text: "El carrito ya está vacio.",
+        text: "El carrito está vacio.",
         avatar: "https://emojipedia-us.s3.amazonaws.com/source/skype/289/question-mark_2753.png",
         duration: 2000,
         stopOnFocus: false,

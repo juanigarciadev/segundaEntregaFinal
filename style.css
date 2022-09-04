@@ -109,6 +109,11 @@ p {
   color: white;
 }
 
+.containerBtnModal {
+  display: flex;
+  justify-content: space-between;
+}
+
 .boton-agregar {
   background-color: #ff0038;
   color: white;

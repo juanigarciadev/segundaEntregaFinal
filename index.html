@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1 id="titulo" class="titulo"><a href="index.html" class="anchor">const estudiandoJS = true<a></h1>
@@ -27,12 +29,15 @@
             <div id="carrito-contenedor">
             </div>
             <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-            <button id="vaciar-carrito" class="boton-agregar">Eliminar todo lo seleccionado</button>
-            <button id="realizar-compra" class="boton-comprar">Realizar compra</button>
+            <div class="containerBtnModal">
+                <button id="vaciar-carrito" class="boton-agregar">Eliminar todo lo seleccionado</button>
+                <button id="realizar-compra" class="boton-comprar">Realizar compra</button>
+            </div>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script defer src="app.js"></script>
 </body>
+
 </html>

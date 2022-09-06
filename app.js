@@ -98,6 +98,7 @@ stockProductos.forEach((producto) => {
     //Se ejecuta el agregar el carrito con la id del producto.
     boton.addEventListener('click', () => {
         agregarAlCarrito(producto.id)
+        console.log("Se ha agregado un item al carrito, despliega para mas informacion",...carrito)
     })
 })
 
@@ -138,7 +139,7 @@ const eliminarDelCarrito = (prodId) => {
     carrito.splice(indice, 1)
     toastEliminadoDelCarrito()
     actualizarCarrito()
-    console.log(carrito)
+    console.log("Se ha eliminado un item del carrito, despliega para mas informacion",...carrito)
 }
 
 // Se crea la función para actualizar el carrito cada vez que algo cambie.
@@ -169,7 +170,6 @@ const actualizarCarrito = () => {
     contadorCarrito.innerText = carrito.length
     // Si la longitud de carrito es mayor o igual a 1, entonces muestra el carrito, en cambio si la longitud es 0, oculta el carrito.
     desaparecerCarrito()
-    console.log(carrito)
 
     //Por cada producto que recorro en mi carrito, al acumulador (acc) le suma la propiedad precio, con el acumulador empezando en 0.
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)

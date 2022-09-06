@@ -98,7 +98,7 @@ stockProductos.forEach((producto) => {
     //Se ejecuta el agregar el carrito con la id del producto.
     boton.addEventListener('click', () => {
         agregarAlCarrito(producto.id)
-        console.log("Se ha agregado un item al carrito, despliega para mas informacion",...carrito)
+        console.log(`Se ha añadido ${producto.nombre} al carrito \n Despliega para ver todo lo seleccionado, cantidad y más detalles`, ...carrito)
     })
 })
 
@@ -139,7 +139,7 @@ const eliminarDelCarrito = (prodId) => {
     carrito.splice(indice, 1)
     toastEliminadoDelCarrito()
     actualizarCarrito()
-    console.log("Se ha eliminado un item del carrito, despliega para mas informacion",...carrito)
+    console.log(`Se ha eliminado ${producto.nombre} del carrito \n Despliega para ver todo lo seleccionado, cantidad y más detalles`, ...carrito)
 }
 
 // Se crea la función para actualizar el carrito cada vez que algo cambie.
